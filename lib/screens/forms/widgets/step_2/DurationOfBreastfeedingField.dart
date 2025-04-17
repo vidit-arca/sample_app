@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+class DurationOfBreastfeedingField extends StatelessWidget {
+  final TextEditingController controller;
+
+  DurationOfBreastfeedingField({required this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      decoration: InputDecoration(
+        labelText: "Duration of Breastfeeding (mo)",
+        labelStyle: TextStyle(
+          color: Colors.grey[600],
+        ),
+        hintText: 'Enter duration in months',
+        hintStyle: TextStyle(
+          color: Colors.grey[400],
+        ),
+        prefixIcon: Icon(
+          Icons.access_time,
+          color: Colors.blueAccent,
+        ),
+        filled: true,
+        fillColor: Colors.grey[100],
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(
+            color: Colors.blueAccent,
+            width: 2,
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(
+            color: Colors.blueAccent.withOpacity(0.5),
+            width: 2,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(
+            color: Colors.blueAccent,
+            width: 2,
+          ),
+        ),
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 12,
+        ),
+      ),
+      keyboardType: TextInputType.number,
+    );
+  }
+}
